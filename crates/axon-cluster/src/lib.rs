@@ -290,7 +290,7 @@ mod tests {
         }
 
         let (recovered, mode) = cluster.pread_full(2, inode, payload.len()).unwrap();
-        assert_eq!(mode, CacheMode::UncachedCoherent);
+        assert_eq!(mode, CacheMode::SharedRead); // Read-only access holds SharedRead
         assert_eq!(recovered, payload);
     }
 }
