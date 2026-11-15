@@ -1,0 +1,17 @@
+[package]
+name = "axon-cluster"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+axon-core.workspace = true
+axon-meta.workspace = true
+axon-ec.workspace = true
+axon-cache.workspace = true
+axon-tier.workspace = true
+axon-kvgrid.workspace = true
+axon-tenant.workspace = true
+serde.workspace = true
+thiserror.workspace = true
