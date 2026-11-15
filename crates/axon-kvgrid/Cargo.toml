@@ -1,0 +1,11 @@
+[package]
+name = "axon-kvgrid"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+axon-core.workspace = true
+blake3.workspace = true
+serde.workspace = true

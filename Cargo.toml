@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/wutz/AxonFS"
+rust-version = "1.80"
+
+[workspace.dependencies]
+axon-core = { path = "crates/axon-core" }
+axon-meta = { path = "crates/axon-meta" }
+axon-ec = { path = "crates/axon-ec" }
+axon-cache = { path = "crates/axon-cache" }
+axon-tier = { path = "crates/axon-tier" }
+axon-kvgrid = { path = "crates/axon-kvgrid" }
+axon-tenant = { path = "crates/axon-tenant" }
+axon-cluster = { path = "crates/axon-cluster" }
+
+blake3 = "1"
+crc32fast = "1"
+reed-solomon-erasure = "6.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
